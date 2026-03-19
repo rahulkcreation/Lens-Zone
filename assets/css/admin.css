@@ -1,0 +1,633 @@
+/* Lens Zone Plugin - Admin Styles (Plugin Pages Only) */
+
+/* ===== FRAME SIZE SPECIFICATIONS ===== */
+.lens-zone-frame-specs {
+    background: #f6f7f7;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.lens-zone-frame-specs h3 {
+    margin: 0 0 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.frame-size-row {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.frame-size-row h4 {
+    margin: 0 0 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d2327;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.frame-size-row .dashicons {
+    color: #2271b1;
+}
+
+.frame-size-row .remove-frame-size {
+    background: #d63638;
+    border-color: #d63638;
+    color: #fff;
+}
+
+.frame-size-row .remove-frame-size:hover {
+    background: #b32d2e;
+    border-color: #b32d2e;
+}
+
+/* ===== MEDIA UPLOADER ===== */
+#category-image-preview,
+#sub-category-image-preview,
+#lens-width-icon-preview,
+#bridge-width-icon-preview,
+#temple-length-icon-preview {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px dashed #c3c4c7;
+    border-radius: 4px;
+    background: #f6f7f7;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#category-image-preview img,
+#sub-category-image-preview img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* ===== POINTS CONTAINER ===== */
+#points-container {
+    margin-bottom: 15px;
+}
+
+.point-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.point-row input[type="text"] {
+    flex: 1;
+}
+
+.point-row .remove-point {
+    background: #f6f7f7;
+    border-color: #d63638;
+    color: #d63638;
+}
+
+.point-row .remove-point:hover {
+    background: #d63638;
+    border-color: #d63638;
+    color: #fff;
+}
+
+/* ===== SORTABLE LISTS ===== */
+#available-lens-categories,
+#selected-lens-categories {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    min-height: 200px;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    background: #f6f7f7;
+}
+
+#available-lens-categories li,
+#selected-lens-categories li {
+    padding: 10px;
+    margin-bottom: 8px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    cursor: move;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+#available-lens-categories li:hover,
+#selected-lens-categories li:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transform: translateY(-1px);
+}
+
+#selected-lens-categories li {
+    border-color: #2271b1;
+    background: #f0f6fc;
+}
+
+#selected-lens-categories li .dashicons-menu {
+    color: #2271b1;
+}
+
+#selected-lens-categories li .dashicons-no-alt {
+    margin-left: auto;
+    color: #d63638;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+#selected-lens-categories li .dashicons-no-alt:hover {
+    color: #b32d2e;
+}
+
+.ui-state-highlight {
+    height: 50px;
+    background: #fef3c7;
+    border: 2px dashed #f59e0b;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 782px) {
+    .form-table th {
+        width: auto;
+        padding: 10px 0;
+        display: block;
+    }
+    
+    .form-table td {
+        padding: 10px 0;
+        display: block;
+    }
+    
+    .form-table .regular-text {
+        max-width: 100%;
+    }
+    
+    .search-box {
+        float: none;
+        margin-bottom: 15px;
+    }
+    
+    .search-box input[type="search"] {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    
+    .subsubsub {
+        float: none;
+        margin-bottom: 15px;
+    }
+    
+    .tablenav-pages {
+        float: none;
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+/* ===== ADMIN CHAT STYLING ===== */
+.lens-zone-admin-chat {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.lens-zone-admin-chat h3 {
+    margin: 0 0 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.lens-zone-admin-chat .chat-messages {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 15px;
+    background: #f6f7f7;
+    margin-bottom: 15px;
+}
+
+.lens-zone-admin-chat .chat-message {
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+}
+
+.lens-zone-admin-chat .customer-message {
+    background: #e3f2fd;
+    border-color: #90caf9;
+    margin-right: 20%;
+}
+
+.lens-zone-admin-chat .admin-message {
+    background: #f5f5f5;
+    border-color: #e0e0e0;
+    margin-left: 20%;
+}
+
+.lens-zone-admin-chat .message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #646970;
+}
+
+.lens-zone-admin-chat .message-header strong {
+    color: #1d2327;
+    font-weight: 600;
+}
+
+.lens-zone-admin-chat .message-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #1d2327;
+}
+
+.lens-zone-admin-chat .message-file {
+    margin-top: 8px;
+}
+
+.lens-zone-admin-chat .message-file a {
+    color: #2271b1;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.lens-zone-admin-chat .message-file a:hover {
+    text-decoration: underline;
+}
+
+.lens-zone-admin-chat .chat-input-area textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.lens-zone-admin-chat .chat-input-area textarea:focus {
+    border-color: #2271b1;
+    outline: none;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+.lens-zone-admin-chat .admin-send-message-btn {
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+}
+
+.lens-zone-admin-chat .admin-send-message-btn:hover {
+    background: #135e96;
+    border-color: #135e96;
+}
+
+/* ===== CUSTOMER CONTACTS BOX ===== */
+.order_data_column .address {
+    background: #f6f7f7;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.order_data_column .address p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.order_data_column .address strong {
+    color: #1d2327;
+    font-weight: 600;
+}
+
+.order_data_column .address a {
+    color: #2271b1;
+    text-decoration: none;
+}
+
+.order_data_column .address a:hover {
+    text-decoration: underline;
+}
+
+/* ===== LENS ZONE PLUGIN SPECIFIC STYLES ===== */
+
+/* ===== SORTABLE LISTS (Lens Categories in Product Edit) ===== */
+#available-lens-categories,
+#selected-lens-categories {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    min-height: 200px;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    background: #f6f7f7;
+}
+
+#available-lens-categories li,
+#selected-lens-categories li {
+    padding: 10px;
+    margin-bottom: 8px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    cursor: move;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+#available-lens-categories li:hover,
+#selected-lens-categories li:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transform: translateY(-1px);
+}
+
+#selected-lens-categories li {
+    border-color: #2271b1;
+    background: #f0f6fc;
+}
+
+#selected-lens-categories li .dashicons-menu {
+    color: #2271b1;
+}
+
+#selected-lens-categories li .dashicons-no-alt {
+    margin-left: auto;
+    color: #d63638;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+#selected-lens-categories li .dashicons-no-alt:hover {
+    color: #b32d2e;
+}
+
+.ui-state-highlight {
+    height: 50px;
+    background: #fef3c7;
+    border: 2px dashed #f59e0b;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+/* ===== FRAME SIZE SPECIFICATIONS (Product Edit Page) ===== */
+.lens-zone-frame-specs {
+    background: #f6f7f7;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.lens-zone-frame-specs h3 {
+    margin: 0 0 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.frame-size-row {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.frame-size-row h4 {
+    margin: 0 0 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d2327;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.frame-size-row .dashicons {
+    color: #2271b1;
+}
+
+.frame-size-row .remove-frame-size {
+    background: #d63638;
+    border-color: #d63638;
+    color: #fff;
+}
+
+.frame-size-row .remove-frame-size:hover {
+    background: #b32d2e;
+    border-color: #b32d2e;
+}
+
+/* Override WooCommerce default label styles for frame size fields */
+.lens-zone-frame-specs label {
+    float: none !important;
+    width: auto !important;
+    padding: 0 !important;
+    margin: 0 0 6px 0 !important;
+    display: block !important;
+}
+
+/* ===== POINTS CONTAINER (Sub-Category Edit) ===== */
+#points-container {
+    margin-bottom: 15px;
+}
+
+.point-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.point-row input[type="text"] {
+    flex: 1;
+}
+
+.point-row .remove-point {
+    background: #f6f7f7;
+    border-color: #d63638;
+    color: #d63638;
+}
+
+.point-row .remove-point:hover {
+    background: #d63638;
+    border-color: #d63638;
+    color: #fff;
+}
+
+/* ===== ADMIN CHAT STYLING (Order Details) ===== */
+.lens-zone-admin-chat {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.lens-zone-admin-chat h3 {
+    margin: 0 0 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.lens-zone-admin-chat .chat-messages {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 15px;
+    background: #f6f7f7;
+    margin-bottom: 15px;
+}
+
+.lens-zone-admin-chat .chat-message {
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+}
+
+.lens-zone-admin-chat .customer-message {
+    background: #e3f2fd;
+    border-color: #90caf9;
+    margin-right: 20%;
+}
+
+.lens-zone-admin-chat .admin-message {
+    background: #f5f5f5;
+    border-color: #e0e0e0;
+    margin-left: 20%;
+}
+
+.lens-zone-admin-chat .message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #646970;
+}
+
+.lens-zone-admin-chat .message-header strong {
+    color: #1d2327;
+    font-weight: 600;
+}
+
+.lens-zone-admin-chat .message-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #1d2327;
+}
+
+.lens-zone-admin-chat .message-file {
+    margin-top: 8px;
+}
+
+.lens-zone-admin-chat .message-file a {
+    color: #2271b1;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.lens-zone-admin-chat .message-file a:hover {
+    text-decoration: underline;
+}
+
+.lens-zone-admin-chat .chat-input-area textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.lens-zone-admin-chat .chat-input-area textarea:focus {
+    border-color: #2271b1;
+    outline: none;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+.lens-zone-admin-chat .admin-send-message-btn {
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+}
+
+.lens-zone-admin-chat .admin-send-message-btn:hover {
+    background: #135e96;
+    border-color: #135e96;
+}
+
+/* ===== CUSTOMER CONTACTS BOX (Order Details) ===== */
+.order_data_column .address {
+    background: #f6f7f7;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.order_data_column .address p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.order_data_column .address strong {
+    color: #1d2327;
+    font-weight: 600;
+}
+
+.order_data_column .address a {
+    color: #2271b1;
+    text-decoration: none;
+}
+
+.order_data_column .address a:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 782px) {
+    #available-lens-categories,
+    #selected-lens-categories {
+        min-height: 150px;
+    }
+    
+    .lens-zone-admin-chat .customer-message,
+    .lens-zone-admin-chat .admin-message {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

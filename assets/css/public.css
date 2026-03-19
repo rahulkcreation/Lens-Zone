@@ -1,0 +1,1464 @@
+/* Lens Zone Frontend Styles */
+
+/* Frame Size Specifications */
+.lens-zone-frame-sizes {
+    background: #f9fafb;
+    padding: 32px 20px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+}
+
+.lens-zone-frame-sizes .frame-size-section > div > div {
+    transition: all 0.3s ease;
+}
+
+
+
+/* Lens Zone Buttons Container */
+.lens-zone-buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+/* Action Buttons */
+.lens-zone-action-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Select Lens Button */
+#select-lens-button {
+    background: #1e3a8a;
+    color: #fff;
+}
+
+#select-lens-button:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+#select-lens-button .dashicons {
+    font-size: 20px;
+}
+
+/* Buy Only Frame Button */
+#buy-only-frame-button {
+    background: #10b981;
+    color: #fff;
+}
+
+#buy-only-frame-button:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* Disabled state */
+#select-lens-button:disabled,
+#buy-only-frame-button:disabled {
+    background: #d1d5db;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* OR text */
+.lens-zone-buttons-container > span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #6b7280;
+    flex-shrink: 0;
+}
+
+/* Modal Overlay */
+#lens-selection-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999999;
+    overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#lens-selection-modal.active {
+    display: flex;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #fff;
+    border-radius: 16px;
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 10;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    flex: 1;
+	text-align: center;
+}
+
+.modal-header .back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s;
+    margin-right: auto;
+}
+
+.modal-header .back-button:hover {
+    color: #111827;
+}
+
+.modal-header .close {
+    font-size: 32px;
+    color: #6b7280;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+    margin-left: auto;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.modal-header .close:hover {
+    color: #111827;
+    background: #f3f4f6;
+}
+
+/* Progress Steps */
+.progress-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 24px;
+    background: #f9fafb;
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.step-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.step-circle.active {
+    background: #1e3a8a;
+    color: #fff;
+}
+
+.step-circle.completed {
+    background: #10b981;
+    color: #fff;
+}
+
+.step-line {
+    width: 40px;
+    height: 2px;
+    background: #e5e7eb;
+}
+
+.step-line.completed {
+    background: #10b981;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 24px;
+}
+
+/* Lens Category/Sub-Category Cards */
+.lens-card {
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+}
+
+
+/* second screen  */
+.lens-selection-modal-body .lens-subcategory-card{
+	flex-wrap: wrap !important;
+}
+
+.lens-selection-modal-body .lens-subcategory-image{
+	width: 26%;
+    height: 180px;
+}
+
+.lens-selection-modal-body .lens-subcategory-view-more {
+	background-color: transparent !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: 12px;
+    font-weight: 800;
+    color: #1f398a !important;
+    text-transform: capitalize;
+}
+
+.lens-selection-modal-body .lens-subcategory-price{
+	width: 100%;
+	width: 100%;
+    align-self: flex-end;
+    background-color: #f7f7f7;
+    padding: 10px 20px;
+    border-radius: 10px;
+	margin: 0px;
+}
+
+.lens-selection-modal-body .lens-subcategory-current-price:before{
+	content: "Price (Lens + Inc. Tax) : ";
+	color: #1e3a8a;
+}
+
+.lens-selection-modal-body .lens-subcategory-content{
+	width: 70%;
+}
+
+.continue-from-subcategory, .modal-content button{
+	background-color: #1e3a8a !important;
+	color: white !important;
+	border-radius: 6px !important;
+}
+/* second screen end */
+
+
+.lens-card:hover {
+    border-color: #1e3a8a;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.1);
+}
+
+.lens-card.selected {
+    border-color: #1e3a8a;
+    background: #eff6ff;
+}
+
+/* Checkmark for selected card */
+.lens-card.selected::after {
+    content: "✓";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    background: #1e3a8a;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.lens-card-image {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.lens-selection-modal-body .lens-subcategory-view-more:hover{
+	background-color: transparent !important;
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+    font-weight: 800;
+    color: #1f398a;
+    text-transform: capitalize;
+}
+
+.lens-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lens-card-content {
+    flex: 1;
+}
+
+.lens-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 8px 0;
+}
+
+.lens-card-description {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 0 0 12px 0;
+    line-height: 1.5;
+}
+
+.lens-card-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lens-card-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    color: #374151;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.lens-card-points li:before {
+    content: "✓";
+    color: #3b82f6;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.view-more-btn {
+    color: #1e3a8a;
+    font-weight: 600;
+    font-size: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 0;
+    margin-top: 8px;
+}
+
+.view-more-btn:hover {
+    text-decoration: underline;
+}
+
+.lens-card-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.lens-card-price .current-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.lens-card-price .original-price {
+    font-size: 16px;
+    color: #9ca3af;
+    text-decoration: line-through;
+}
+
+/* Power Options */
+.power-options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.power-option-card {
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+	margin: 10px 0px;
+}
+
+.power-option-card:hover {
+    border-color: #1e3a8a;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.1);
+}
+
+.power-option-card.selected {
+    border-color: #1e3a8a;
+    background: #eff6ff;
+}
+
+.power-option-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.power-option-content h3 {
+    margin: 0 0 4px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.power-option-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Power Form */
+.power-form {
+    margin-top: 24px;
+}
+
+.power-form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.power-form-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.power-form-checkbox label {
+    font-size: 16px;
+    color: #374151;
+    cursor: pointer;
+}
+
+.power-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.power-form-grid.one-column {
+    grid-template-columns: 1fr;
+}
+
+.power-form-grid.two-columns {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.power-form-column h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6b7280;
+    margin: 0 0 16px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.power-form-field {
+    margin-bottom: 16px;
+}
+
+.power-form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.power-form-field label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.power-form-field select,
+.power-form-field input[type="text"],
+.power-form-field input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.power-form-field select:focus,
+.power-form-field input:focus {
+    outline: none;
+    border-color: #1e3a8a;
+}
+
+
+
+.support-text {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.support-text a {
+    color: #1e3a8a;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.support-text a:hover {
+    text-decoration: underline;
+}
+
+.support-text-power {
+    margin: 16px 0;
+    padding: 12px 16px;
+    background: #f9fafb;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #374151;
+    text-align: center;
+}
+
+.support-text-power a {
+    color: #1e3a8a;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.support-text-power a:hover {
+    text-decoration: underline;
+}
+
+/* Upload Prescription */
+.upload-area {
+    border: 2px dashed #d1d5db;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: #1e3a8a;
+    background: #f9fafb;
+}
+
+.upload-area-icon {
+    font-size: 48px;
+    color: #9ca3af;
+    margin-bottom: 16px;
+}
+
+.upload-area-text {
+    font-size: 16px;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.upload-area-subtext {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 20px 24px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    z-index: 10;
+}
+
+.subtotal {
+    font-size: 18px;
+    color: #6b7280;
+}
+
+.subtotal strong {
+    font-size: 24px;
+    color: #111827;
+    margin-left: 8px;
+}
+
+.continue-button {
+    background: #1e3a8a;
+    color: #fff;
+    border: none;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.continue-button:hover:not(:disabled) {
+    background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+.continue-button:disabled {
+    background: #d1d5db;
+    cursor: not-allowed;
+}
+
+/* Login Notice */
+.login-notice {
+    background: #fef3c7;
+    border: 1px solid #fbbf24;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-notice-text {
+    color: #92400e;
+    font-size: 14px;
+}
+
+.login-button {
+    background: #1e3a8a;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* View Details Link */
+.lens-view-details-link {
+    color: #1e3a8a !important;
+    font-weight: 600 !important;
+    text-decoration: underline !important;
+    cursor: pointer !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 14px !important;
+    display: inline !important;
+    line-height: normal !important;
+    pointer-events: auto !important;
+}
+
+.lens-view-details-link:hover {
+    color: #1e40af !important;
+    text-decoration: underline !important;
+}
+
+.lens-view-details-link:focus {
+    outline: 2px solid #1e3a8a !important;
+    outline-offset: 2px !important;
+}
+
+/* Ensure parent wrapper doesn't interfere */
+.lens-details-wrapper {
+    display: inline !important;
+    pointer-events: auto !important;
+}
+
+.lens-details-cart-wrapper {
+    margin-top: 8px !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+.lens-details-cart-wrapper strong {
+    color: #374151 !important;
+    font-weight: 600 !important;
+}
+
+/* WooCommerce cart item meta styling override */
+.woocommerce-cart-form .cart_item .product-name dl.variation,
+.woocommerce-checkout-review-order-table .cart_item .product-name dl.variation {
+    margin: 0.5em 0 !important;
+}
+
+.woocommerce-cart-form .cart_item .product-name dl.variation dd,
+.woocommerce-checkout-review-order-table .cart_item .product-name dl.variation dd {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.woocommerce-cart-form .cart_item .product-name dl.variation dd p,
+.woocommerce-checkout-review-order-table .cart_item .product-name dl.variation dd p {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Details Popup */
+.detail-row {
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+    color: #374151;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row strong {
+    color: #111827;
+    margin-right: 8px;
+}
+
+.detail-section {
+    margin: 20px 0;
+    padding: 16px;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.detail-section h3 {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* Power details table */
+.modal-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+.modal-body table th,
+.modal-body table td {
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+.modal-body table thead tr {
+    background: #f3f4f6;
+}
+
+.modal-body table th {
+    font-weight: 600;
+    color: #111827;
+}
+
+.upload-prescription-cart-btn {
+    background: #1e3a8a;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-prescription-cart-btn:hover {
+    background: #1e40af;
+}
+
+/* Order Chat Section */
+.lens-zone-order-chat {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.lens-zone-order-chat h2 {
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.chat-messages {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 16px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.chat-message {
+    margin-bottom: 16px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.customer-message {
+    background: #eff6ff;
+    margin-left: 20%;
+}
+
+.admin-message {
+    background: #f3f4f6;
+    margin-right: 20%;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.message-header strong {
+    color: #111827;
+}
+
+.message-time {
+    color: #6b7280;
+}
+
+.message-text {
+    color: #374151;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.message-file {
+    margin-top: 8px;
+}
+
+.message-file a {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #1e3a8a;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.message-file a:hover {
+    text-decoration: underline;
+}
+
+.no-messages {
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+}
+
+.chat-input-area {
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.chat-input-area textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: vertical;
+    margin-bottom: 12px;
+}
+
+.chat-input-area textarea:focus {
+    outline: none;
+    border-color: #1e3a8a;
+}
+
+.chat-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.upload-file-btn {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.upload-file-btn:hover {
+    background: #e5e7eb;
+}
+
+.send-message-btn {
+    background: #1e3a8a;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.send-message-btn:hover {
+    background: #1e40af;
+}
+
+.file-preview {
+    margin-top: 12px;
+    padding: 12px;
+    background: #f9fafb;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #374151;
+}
+
+.file-preview .remove-file {
+    color: #ef4444;
+    text-decoration: none;
+    margin-left: 8px;
+    font-weight: 600;
+}
+
+.file-preview .remove-file:hover {
+    text-decoration: underline;
+}
+
+/* Lens Details Wrapper */
+.lens-details-wrapper {
+    display: inline-block;
+}
+
+.lens-data-storage {
+    display: none !important;
+}
+
+/* Improved Modal Styling */
+.modal-content {
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Better close button */
+.modal-header .close {
+    transition: all 0.2s ease;
+}
+
+.modal-header .close:hover {
+    transform: rotate(90deg);
+}
+
+/* Improved lens card hover effect */
+.lens-card {
+    transition: all 0.2s ease;
+}
+
+.lens-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Better button styling */
+.continue-button {
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(30, 58, 138, 0.2);
+}
+
+.continue-button:hover:not(:disabled) {
+    box-shadow: 0 4px 8px rgba(30, 58, 138, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #lens-selection-modal {
+        padding: 0;
+        align-items: flex-start;
+    }
+    
+    .modal-content {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 0;
+        max-height: 100vh;
+        min-height: 100vh;
+        margin: 0;
+    }
+    
+    .modal-header {
+        padding: 16px;
+    }
+    
+    .modal-header h2 {
+        font-size: 20px;
+    }
+    
+    .modal-body {
+        padding: 16px;
+    }
+    
+    /* Mobile layout for lens cards - match provided image */
+    .lens-card {
+        flex-direction: row;
+        padding: 20px 16px;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .lens-card-image {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+        margin-bottom: 12px;
+        align-self: flex-start;
+    }
+    
+    .lens-card-content {
+        width: 100%;
+    }
+    
+    /* Checkmark position for mobile */
+    .lens-card.selected::after {
+        top: 20px;
+        right: 16px;
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+    
+    .lens-card-title {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .lens-card-description {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+    
+    .lens-card-points {
+        margin-bottom: 8px;
+    }
+    
+    .lens-card-points li {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    
+    .lens-card-price {
+        align-items: flex-start;
+        margin-top: 12px;
+    }
+    
+    .lens-card-price .current-price {
+        font-size: 20px;
+    }
+	
+/* 	second screen */
+	.lens-selection-modal-body .lens-subcategory-card{
+		gap: 10px 20px;
+	}
+	
+	
+	.lens-selection-modal-body .lens-subcategory-price {
+		align-items: flex-end;
+	}
+    
+    .power-form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .power-form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-footer {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+    
+    .subtotal {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    .subtotal strong {
+        font-size: 20px;
+    }
+    
+    .continue-button {
+        width: 100%;
+    }
+    
+    .power-option-card {
+        padding: 16px;
+    }
+    
+    .power-option-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .power-option-content h3 {
+        font-size: 16px;
+    }
+    
+    .customer-message,
+    .admin-message {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .chat-actions {
+        flex-direction: column;
+    }
+    
+    .upload-file-btn,
+    .send-message-btn {
+        width: 100%;
+    }
+    
+    /* Better table display on mobile */
+    .modal-body table {
+        font-size: 12px;
+    }
+    
+    .modal-body table th,
+    .modal-body table td {
+        padding: 8px 4px;
+    }
+    
+    /* Buttons responsive - stack vertically */
+    .lens-zone-buttons-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .lens-zone-buttons-container > span {
+        display: none; /* Hide OR text on mobile */
+    }
+    
+    .lens-zone-buttons-container button {
+        width: 100%;
+    }
+    
+    /* Frame size cards - keep 3 in row on mobile */
+    .lens-zone-frame-sizes {
+        padding: 20px 10px;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 12px;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div {
+        padding: 16px 8px;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div > div:first-child {
+        height: 40px;
+        margin-bottom: 8px;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div > div:first-child img {
+        max-height: 40px;
+        width: auto;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div > div:first-child > div {
+        width: 70px;
+        height: 40px;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div p:nth-child(2) {
+        font-size: 10px;
+        margin-bottom: 6px;
+        letter-spacing: 0.03em;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div p:nth-child(3) {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section h2 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-header h2 {
+        font-size: 18px;
+    }
+    
+    .lens-card {
+        padding: 16px 12px;
+    }
+    
+    .lens-card-image {
+        width: 75px;
+        height: 75px;
+        margin-bottom: 10px;
+    }
+    
+    .lens-card-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .lens-card-description {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .lens-card-points li {
+        font-size: 12px;
+    }
+    
+    .lens-card-price {
+        margin-top: 10px;
+    }
+    
+    .lens-card-price .current-price {
+        font-size: 15px;
+    }
+	
+	/* 	second screen */
+	.lens-selection-modal-body .lens-subcategory-card{
+		gap: 10px;
+	}
+	
+	.lens-selection-modal-body .lens-subcategory-image{
+		width: 35%;
+        height: 130px;
+	}
+    
+    .power-option-card {
+        padding: 12px;
+    }
+    
+    .power-option-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+    
+    .power-option-content h3 {
+        font-size: 15px;
+    }
+    
+    .power-option-content p {
+        font-size: 13px;
+    }
+    
+    .modal-footer {
+        padding: 12px;
+    }
+    
+    .subtotal {
+        font-size: 14px;
+    }
+    
+    .subtotal strong {
+        font-size: 18px;
+    }
+    
+    .continue-button {
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+    
+    /* Checkmark for small screens */
+    .lens-card.selected::after {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+        top: -12px;
+        right: -6px;
+    }
+}
+
+/* Additional mobile responsive styles for frame sizes */
+@media (max-width: 480px) {
+    .lens-zone-frame-sizes {
+        padding: 16px 8px !important;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div {
+        padding: 0 5px !important;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div {
+        gap: 10px !important;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div {
+        padding: 14px 6px !important;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div > div:first-child {
+        height: 35px !important;
+        margin-bottom: 6px !important;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div > div:first-child img {
+        max-height: 35px !important;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div > div:first-child > div {
+        width: 60px !important;
+        height: 35px !important;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div p:nth-child(2) {
+        font-size: 9px !important;
+        margin-bottom: 4px !important;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div p:nth-child(3) {
+        font-size: 20px !important;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section h2 {
+        font-size: 18px !important;
+        margin-bottom: 12px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .lens-zone-frame-sizes .frame-size-section > div > div {
+        gap: 8px !important;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div {
+        padding: 12px 5px !important;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div > div:first-child {
+        height: 30px !important;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div > div:first-child img {
+        max-height: 30px !important;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div > div:first-child > div {
+        width: 50px !important;
+        height: 30px !important;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div p:nth-child(2) {
+        font-size: 8px !important;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section > div > div > div p:nth-child(3) {
+        font-size: 18px !important;
+    }
+    
+    .lens-zone-frame-sizes .frame-size-section h2 {
+        font-size: 16px !important;
+    }
+}
