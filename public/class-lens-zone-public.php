@@ -596,14 +596,7 @@ class Lens_Zone_Public {
         <div class="modal-body manual-power-modal-body">
             <h3 class="manual-power-section-title"><?php _e( 'Enter power manually', 'lens-zone' ); ?></h3>
             
-            <?php if ( ! is_user_logged_in() ): ?>
-                <div class="login-notice manual-power-login-notice">
-                    <div class="login-notice-text manual-power-login-text">
-                        <?php _e( "It seems you are not logged in. Please register or login.", 'lens-zone' ); ?>
-                    </div>
-                    <a href="https://lens.arttechfuzion.com/my-account/" class="login-button manual-power-login-btn"><?php _e( 'REGISTER', 'lens-zone' ); ?></a>
-                </div>
-            <?php else: ?>
+
             
             <div class="power-form-checkbox manual-power-checkbox">
                 <input type="checkbox" id="same-power-checkbox" class="manual-power-same-checkbox">
@@ -706,12 +699,10 @@ class Lens_Zone_Public {
                 </div>
             <?php endif; ?>
             
-            <?php endif; ?>
+
         </div>
         <div class="modal-footer manual-power-modal-footer">
-            <?php if ( is_user_logged_in() ): ?>
                 <button class="continue-button save-proceed-button manual-power-save-btn"><?php _e( 'Save & Proceed', 'lens-zone' ); ?></button>
-            <?php endif; ?>
         </div>
         <?php
         $html = ob_get_clean();
@@ -731,14 +722,7 @@ class Lens_Zone_Public {
         <div class="modal-body upload-prescription-modal-body">
             <h3 class="upload-prescription-section-title"><?php _e( 'Upload Prescription', 'lens-zone' ); ?></h3>
             
-            <?php if ( ! is_user_logged_in() ): ?>
-                <div class="login-notice upload-prescription-login-notice">
-                    <div class="login-notice-text upload-prescription-login-text">
-                        <?php _e( "It seems you are not logged in. Please register or login.", 'lens-zone' ); ?>
-                    </div>
-                    <a href="<?php echo wp_registration_url(); ?>" class="login-button upload-prescription-login-btn"><?php _e( 'REGISTER', 'lens-zone' ); ?></a>
-                </div>
-            <?php else: ?>
+
             
             <ul class="upload-prescription-instructions" style="color: #6b7280; font-size: 14px; margin: 16px 0;">
                 <li><?php _e( 'PDF, JPEG, PNG formats accepted', 'lens-zone' ); ?></li>
@@ -772,12 +756,10 @@ class Lens_Zone_Public {
                 </div>
             </div>
             
-            <?php endif; ?>
+
         </div>
         <div class="modal-footer upload-prescription-modal-footer">
-            <?php if ( is_user_logged_in() ): ?>
                 <button class="continue-button upload-proceed-button upload-prescription-continue-btn"><?php _e( 'Continue', 'lens-zone' ); ?></button>
-            <?php endif; ?>
         </div>
         <?php
         $html = ob_get_clean();
